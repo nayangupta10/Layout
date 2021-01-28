@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/launcher_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@+id/userName_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/user_name"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        app:layout_constraintEnd_toStartOf="@+id/userName_et"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launcher_iv" />
+
+    <EditText
+        android:id="@+id/userName_et"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:hint="@string/user_name"
+        app:layout_constraintLeft_toRightOf="@id/username_tv"
+        app:layout_constraintTop_toBottomOf="@id/launcher_iv" />
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        app:layout_constraintRight_toLeftOf="@id/password_et"
+        app:layout_constraintTop_toBottomOf="@id/userName_et" />
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:hint="@string/password"
+        app:layout_constraintLeft_toRightOf="@id/password_tv"
+        app:layout_constraintTop_toBottomOf="@id/userName_et" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_et" />
+</androidx.constraintlayout.widget.ConstraintLayout>
