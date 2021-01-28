@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/launcher_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:id="@+id/username_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/launcher_iv"
+        android:layout_marginTop="@dimen/top_margin"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/user_name"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/userName_et"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/left_right_margin"
+            android:layout_toRightOf="@+id/username_tv"
+            android:hint="@string/user_name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/password_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/username_rl"
+        android:layout_marginTop="@dimen/top_margin"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/password_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/password"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/left_right_margin"
+            android:layout_toRightOf="@id/password_tv"
+            android:hint="@string/password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/login"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
